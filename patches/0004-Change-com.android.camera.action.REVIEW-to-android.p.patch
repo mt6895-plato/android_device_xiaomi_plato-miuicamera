@@ -1,16 +1,19 @@
-From 2837c90a4dcf6678e168d7a0f551a116b5128910 Mon Sep 17 00:00:00 2001
+From 2a5c275fe1c10da730f2affaeca0d82859a4fcd7 Mon Sep 17 00:00:00 2001
 From: Arian <arian.kulmer@web.de>
-Date: Wed, 16 Oct 2024 01:29:58 +0200
-Subject: [PATCH 4/6] Change com.android.camera.action.REVIEW to
+Date: Thu, 27 Mar 2025 05:20:20 +0000
+Subject: [PATCH 4/5] Change com.android.camera.action.REVIEW to
  android.provider.action.REVIEW
 
 This is the standard intent for review actions
+
+Change-Id: I2478d87d8125c54edbe4181d7b1a3bfc2a8cd82d
+Signed-off-by: Saikrishna1504 <saikrishna26918@gmail.com>
 ---
  smali/com/android/camera/w3.smali | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/smali/com/android/camera/w3.smali b/smali/com/android/camera/w3.smali
-index 8f540ec..564bcd0 100644
+index 1cfa2eb..c3dcd80 100644
 --- a/smali/com/android/camera/w3.smali
 +++ b/smali/com/android/camera/w3.smali
 @@ -1136,7 +1136,7 @@

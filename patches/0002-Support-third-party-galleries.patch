@@ -1,40 +1,40 @@
-From 6f538d44a4cb82cbf3ebed1d2aa653ed1087deb2 Mon Sep 17 00:00:00 2001
+From 951719c012c0a3375f794993a1c5dee235e42007 Mon Sep 17 00:00:00 2001
 From: Arian <arian.kulmer@web.de>
-Date: Fri, 8 Mar 2024 02:11:53 +0100
-Subject: [PATCH 2/6] Support third party galleries
+Date: Thu, 27 Mar 2025 05:13:34 +0000
+Subject: [PATCH 2/5] Support third party galleries
 
+Signed-off-by: Saikrishna1504 <saikrishna26918@gmail.com>
 ---
- smali/com/android/camera/w3.smali             |  8 ++-----
+ smali/com/android/camera/w3.smali             |  7 ++----
  .../provider/ParallelProcessProvider.smali    | 22 -------------------
- 2 files changed, 2 insertions(+), 28 deletions(-)
+ 2 files changed, 2 insertions(+), 27 deletions(-)
 
 diff --git a/smali/com/android/camera/w3.smali b/smali/com/android/camera/w3.smali
-index b35f8bc..2625b5d 100644
+index b35f8bc..6030efc 100644
 --- a/smali/com/android/camera/w3.smali
 +++ b/smali/com/android/camera/w3.smali
-@@ -254,9 +254,9 @@
+@@ -1092,9 +1092,9 @@
  
-     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+     invoke-direct {p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
  
--    const-string v2, "com.miui.gallery"
-+    const-string v2, "android.intent.category.APP_GALLERY"
+-    const-string v0, "com.miui.gallery"
++    const-string v0, "android.intent.category.APP_GALLERY"
  
--    invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-+    invoke-virtual {v1, v2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+-    invoke-virtual {p0, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
++    invoke-virtual {p0, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
  
-     iget-object v2, p0, Lcom/android/camera/w3;->f:Landroid/content/ServiceConnection;
+     invoke-virtual {p1, p0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
  
-@@ -1201,10 +1201,6 @@
+@@ -1201,9 +1201,6 @@
      invoke-direct {p0, v0, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
  
      :goto_0
 -    const-string p1, "com.miui.gallery"
 -
 -    invoke-virtual {p0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
--
+ 
      const-string p1, "from_MiuiCamera"
  
-     const/4 p2, 0x1
 diff --git a/smali_classes4/com/xiaomi/camera/parallelservice/provider/ParallelProcessProvider.smali b/smali_classes4/com/xiaomi/camera/parallelservice/provider/ParallelProcessProvider.smali
 index 9682910..aa44f79 100644
 --- a/smali_classes4/com/xiaomi/camera/parallelservice/provider/ParallelProcessProvider.smali
