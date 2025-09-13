@@ -17,6 +17,7 @@ dontaudit miuicamera_app radio_service:service_manager find;
 r_dir_file(miuicamera_app, vendor_camera_data_file)
 
 allow miuicamera_app privapp_data_file:file execute;
+allow miuicamera_app hal_aidlbgservice_service:service_manager find;
 
 get_prop(miuicamera_app, vendor_display_type_prop)
 get_prop(miuicamera_app, vendor_us_proximity_prop)
