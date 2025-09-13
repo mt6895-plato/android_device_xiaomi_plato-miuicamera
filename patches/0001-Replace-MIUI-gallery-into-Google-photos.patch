@@ -1,0 +1,125 @@
+From e1bb6fbe38e50d4d08236da2eb6b1933cd84776c Mon Sep 17 00:00:00 2001
+From: Ido <dev.xyzuniverse@gmail.com>
+Date: Sat, 13 Sep 2025 16:03:51 +0200
+Subject: [PATCH] Replace MIUI gallery into Google photos
+
+Change-Id: I4479cc4587356bd2a02ac235b522fe9569cc2f81
+Signed-off-by: Ido <dev.xyzuniverse@gmail.com>
+---
+ AndroidManifest.xml                                             | 2 +-
+ smali/com/android/camera/Camera.smali                           | 2 +-
+ smali/mf/d.smali                                                | 2 +-
+ smali/z/m1.smali                                                | 2 +-
+ smali/z/y3.smali                                                | 2 +-
+ .../parallelservice/provider/ParallelProcessProvider.smali      | 2 +-
+ smali_classes2/ni/a.smali                                       | 2 +-
+ smali_classes2/z7/w.smali                                       | 2 +-
+ 8 files changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index 5c714f2c..83f2f329 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -84,7 +84,7 @@
+         </intent>
+         <package android:name="com.xiaomi.scanner"/>
+         <package android:name="com.android.htmlviewer"/>
+-        <package android:name="com.miui.gallery"/>
++        <package android:name="com.google.android.apps.photos"/>
+         <package android:name="com.xiaomi.wearable"/>
+     </queries>
+     <permission android:name="com.android.camera.permission.DebugProvider" android:protectionLevel="signature"/>
+diff --git a/smali/com/android/camera/Camera.smali b/smali/com/android/camera/Camera.smali
+index 60fd98d7..6d01bff4 100644
+--- a/smali/com/android/camera/Camera.smali
++++ b/smali/com/android/camera/Camera.smali
+@@ -7508,7 +7508,7 @@
+ 
+     invoke-direct {p0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+ 
+-    const-string p1, "com.miui.gallery"
++    const-string p1, "com.google.android.apps.photos"
+ 
+     invoke-virtual {p0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+ 
+diff --git a/smali/mf/d.smali b/smali/mf/d.smali
+index 50dc8543..010f6504 100644
+--- a/smali/mf/d.smali
++++ b/smali/mf/d.smali
+@@ -43,7 +43,7 @@
+ 
+     move-result-object v3
+ 
+-    const-string v4, "com.miui.gallery"
++    const-string v4, "com.google.android.apps.photos"
+ 
+     const/16 v5, 0x80
+ 
+diff --git a/smali/z/m1.smali b/smali/z/m1.smali
+index c0eee6bc..9baf4eb1 100644
+--- a/smali/z/m1.smali
++++ b/smali/z/m1.smali
+@@ -810,7 +810,7 @@
+ 
+     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+ 
+-    const-string v2, "com.miui.gallery"
++    const-string v2, "com.google.android.apps.photos"
+ 
+     invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+ 
+diff --git a/smali/z/y3.smali b/smali/z/y3.smali
+index a8cc0045..0f6bd166 100644
+--- a/smali/z/y3.smali
++++ b/smali/z/y3.smali
+@@ -167,7 +167,7 @@
+     invoke-direct {v1, v5, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+ 
+     :goto_0
+-    const-string p2, "com.miui.gallery"
++    const-string p2, "com.google.android.apps.photos"
+ 
+     invoke-virtual {v1, p2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+ 
+diff --git a/smali_classes2/com/xiaomi/camera/parallelservice/provider/ParallelProcessProvider.smali b/smali_classes2/com/xiaomi/camera/parallelservice/provider/ParallelProcessProvider.smali
+index b9068e60..0e693c0b 100644
+--- a/smali_classes2/com/xiaomi/camera/parallelservice/provider/ParallelProcessProvider.smali
++++ b/smali_classes2/com/xiaomi/camera/parallelservice/provider/ParallelProcessProvider.smali
+@@ -320,7 +320,7 @@
+     goto :goto_0
+ 
+     :sswitch_2
+-    const-string v0, "com.miui.gallery"
++    const-string v0, "com.google.android.apps.photos"
+ 
+     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+ 
+diff --git a/smali_classes2/ni/a.smali b/smali_classes2/ni/a.smali
+index 17431ae6..bd9565e6 100644
+--- a/smali_classes2/ni/a.smali
++++ b/smali_classes2/ni/a.smali
+@@ -15,7 +15,7 @@
+ .method public static a(Landroid/content/Context;)Z
+     .locals 6
+ 
+-    const-string v0, "com.miui.gallery"
++    const-string v0, "com.google.android.apps.photos"
+ 
+     const/4 v1, 0x1
+ 
+diff --git a/smali_classes2/z7/w.smali b/smali_classes2/z7/w.smali
+index 34401b2d..399901d0 100644
+--- a/smali_classes2/z7/w.smali
++++ b/smali_classes2/z7/w.smali
+@@ -3090,7 +3090,7 @@
+ 
+     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+ 
+-    const-string v1, "com.miui.gallery"
++    const-string v1, "com.google.android.apps.photos"
+ 
+     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+ 
+-- 
+2.43.0
+
