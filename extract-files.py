@@ -18,8 +18,8 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/xiaomi/duchamp-miuicamera',
-    'vendor/xiaomi/duchamp'
+    'device/xiaomi/rodin-miuicamera',
+    'vendor/xiaomi/rodin'
 ]
 
 def lib_fixup_system_ext_suffix(lib: str, partition: str, *args, **kwargs):
@@ -46,7 +46,7 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'duchamp-miuicamera',
+    'rodin-miuicamera',
     'xiaomi',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
