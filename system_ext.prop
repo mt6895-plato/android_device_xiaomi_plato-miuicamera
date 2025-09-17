@@ -1,5 +1,5 @@
-persist.vendor.camera.privapp.list=com.android.camera
+persist.vendor.camera.privapp.list=com.android.camera,org.lineageos.aperture
 ro.com.google.lens.oem_camera_package=com.android.camera
 ro.product.mod_device=rodin_global
 ro.miui.notch=1
-vendor.camera.aux.packagelist=com.android.camera
+vendor.camera.aux.packagelist=com.android.camera,org.lineageos.aperture
