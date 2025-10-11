@@ -59,6 +59,7 @@ function blob_fixup() {
             tmp_dir="~/.cache/MiuiCamera"
             java -jar $(pwd)/../../../prebuilts/extract-tools/common/apktool/apktool.jar -r d "$2" -o "$tmp_dir" -f
             git apply --directory="$tmp_dir" "$MY_DIR"/patches/MiuiCamera.patch
+            grep -rl "com.miui.gallery" "$tmp_dir" | xargs sed -i 's|"com.miui.gallery"|"com.google.android.apps.photos"|g'
             java -jar $(pwd)/../../../prebuilts/extract-tools/common/apktool/apktool.jar b "$tmp_dir" -o "$2"
             rm -rf "$tmp_dir"
             ;;
