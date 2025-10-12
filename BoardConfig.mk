@@ -9,5 +9,8 @@ MIUICAMERA_PATH := device/xiaomi/rodin-miuicamera
 # Properties
 TARGET_SYSTEM_EXT_PROP += $(MIUICAMERA_PATH)/system_ext.prop
 
+# SEPolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(MIUICAMERA_PATH)/sepolicy/vendor
+
 # Inherit from the proprietary version
 include vendor/xiaomi/rodin-miuicamera/BoardConfigVendor.mk
