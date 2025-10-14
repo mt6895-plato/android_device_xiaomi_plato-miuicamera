@@ -5,9 +5,10 @@
 #
 
 MIUICAMERA_PATH := device/xiaomi/rodin-miuicamera
+CAMERA_PACKAGE_NAME := com.android.camera
 
 # Properties
-TARGET_SYSTEM_EXT_PROP += $(MIUICAMERA_PATH)/system_ext.prop
+TARGET_SYSTEM_PROP += $(MIUICAMERA_PATH)/system.prop
 
 # SEPolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(MIUICAMERA_PATH)/sepolicy/vendor
