@@ -1,3 +1,42 @@
+diff --git a/smali/c1/u0.smali b/smali/c1/u0.smali
+index 64ba52e4..34c888e0 100644
+--- a/smali/c1/u0.smali
++++ b/smali/c1/u0.smali
+@@ -329,6 +329,33 @@
+ .method public static s(IILaa/d;)Z
+     .locals 11
+ 
++    const/16 v0, 0x780
++
++    if-ne p0, v0, :cond_check_4k
++
++    const/16 v0, 0x438
++
++    if-ne p1, v0, :cond_check_4k
++
++    const/4 p0, 0x1
++
++    return p0
++
++    :cond_check_4k
++    const/16 v0, 0xf00
++
++    if-ne p0, v0, :cond_check_list
++
++    const/16 v0, 0x870
++
++    if-ne p1, v0, :cond_check_list
++
++    const/4 p0, 0x1
++
++    return p0
++
++    :cond_check_list
++
+     iget-object v0, p2, Laa/d;->g0:Ljava/util/ArrayList;
+ 
+     const/4 v1, 0x0
+
 diff --git a/smali/com/android/camera/Camera.smali b/smali/com/android/camera/Camera.smali
 index b1e7c8e9..ff533c4e 100644
 --- a/smali/com/android/camera/Camera.smali
