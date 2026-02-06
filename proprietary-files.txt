@@ -5,8 +5,8 @@ system_ext/lib64/libcamera_algoup_jni.xiaomi.so
 system_ext/lib64/libcamera_mianode_jni.xiaomi.so
 system_ext/lib64/libcamera_ispinterface_jni.xiaomi.so
 system_ext/lib64/libmtkisp_metadata_sys.so
-system_ext/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so;MODULE=vendor.mediatek.hardware.camera.isphal@1.0_system
-system_ext/lib64/vendor.mediatek.hardware.camera.isphal-V1-ndk.so;MODULE=vendor.mediatek.hardware.camera.isphal-V1-ndk_system
+system_ext/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so;MODULE_SUFFIX=-system_ext
+system_ext/lib64/vendor.mediatek.hardware.camera.isphal-V1-ndk.so;MODULE_SUFFIX=-system_ext
 
 # Mediatek Framework
 system_ext/framework/mediatek-framework.jar:system/framework/mediatek-framework.jar;BOOT_JAR
