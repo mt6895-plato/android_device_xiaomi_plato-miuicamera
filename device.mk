@@ -17,4 +17,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit from the proprietary version
-$(call inherit-product, vendor/xiaomi/rodin-miuicamera/rodin-miuicamera-vendor.mk)
+$(call inherit-product, vendor/xiaomi/plato-miuicamera/plato-miuicamera-vendor.mk)

@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-MIUICAMERA_PATH := device/xiaomi/rodin-miuicamera
+MIUICAMERA_PATH := device/xiaomi/plato-miuicamera
 CAMERA_PACKAGE_NAME := com.android.camera
 
 # Properties
@@ -14,4 +14,4 @@ TARGET_SYSTEM_PROP += $(MIUICAMERA_PATH)/system.prop
 BOARD_VENDOR_SEPOLICY_DIRS += $(MIUICAMERA_PATH)/sepolicy/vendor
 
 # Inherit from the proprietary version
-include vendor/xiaomi/rodin-miuicamera/BoardConfigVendor.mk
+include vendor/xiaomi/plato-miuicamera/BoardConfigVendor.mk
