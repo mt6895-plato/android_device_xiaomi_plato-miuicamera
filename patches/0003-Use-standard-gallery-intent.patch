@@ -1,7 +1,7 @@
 From 5f59aa12d878741351c6111ba01102cf085af4da Mon Sep 17 00:00:00 2001
 From: Arian <arian.kulmer@web.de>
 Date: Thu, 28 Nov 2024 20:05:39 +0530
-Subject: [PATCH 03/10] Use standard gallery intent
+Subject: [PATCH 03/05] Use standard gallery intent
 
 *Change com.android.camera.action.REVIEW to android.provider.action.REVIEW
 ---
