@@ -26,15 +26,13 @@ def lib_fixup_system_ext_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}-{partition}' if partition == 'system_ext' else None
 
 blob_fixups: blob_fixups_user_type = {
-    'system_ext/priv-app/MiuiCamera/MiuiCamera.apk': blob_fixup()
-        .apktool_patch('patches'),
     'system_ext/lib64/libcamera_algoup_jni.xiaomi.so': blob_fixup()
         .add_needed('libgui_shim_miuicamera.so')
         .sig_replace('08 AD 40 F9', '08 A9 40 F9'),
-    'system_ext/lib64/libcamera_mianode_jni.xiaomi.so': blob_fixup()
-        .add_needed('libgui_shim_miuicamera.so'),
     'system_ext/lib64/libmicampostproc_client.so': blob_fixup()
         .remove_needed('libhidltransport.so'),
+    'system_ext/lib64/vendor.mediatek.hardware.camera.isphal-V1-ndk.so': blob_fixup()
+        .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

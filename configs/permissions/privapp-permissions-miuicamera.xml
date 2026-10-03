@@ -17,4 +17,5 @@
       <permission name="android.permission.TURN_SCREEN_ON" />
       <permission name="android.permission.READ_PHONE_STATE" />
    </privapp-permissions>
+
 </permissions>

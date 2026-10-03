@@ -1,7 +1,17 @@
-# Unpinned blobs from plato-user 15 AP3A.240905.015.A2 OS2.0.217.0.VLQMIXM release-keys
+# From Github@NaufalSaputraa/PlatoCamera
 
-product/priv-app/MiuiCamera/MiuiCamera.apk:system_ext/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Aperture
+system_ext/etc/cameracustomize.json
+system_ext/etc/cameraopt.json
+system_ext/etc/cameraopt_thirdParty.json
+system_ext/etc/camerascene.json
+system_ext/etc/task_profiles_cameraopt.json
+system_ext/framework/com.xiaomi.hardware.camera.companion-V1.jar
+system_ext/framework/miui-cameraopt.jar
 system_ext/lib64/libcamera_algoup_jni.xiaomi.so
-system_ext/lib64/libcamera_mianode_jni.xiaomi.so
 system_ext/lib64/libcamera_ispinterface_jni.xiaomi.so
-system_ext/lib64/vendor.xiaomi.hardware.campostproc@1.0.so
+system_ext/lib64/libcamera_mianode_jni.xiaomi.so
+system_ext/lib64/libgui_shim_miuicamera.so
+system_ext/lib64/libmtkisp_metadata_sys.so
+system_ext/lib64/vendor.mediatek.hardware.camera.isphal-V1-ndk.so
+product/priv-app/MiuiCamera/MiuiCamera.apk:system_ext/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Aperture
+product/priv-app/ExtraPhotoGlobal/ExtraPhotoGlobal.apk:system_ext/priv-app/ExtraPhotoGlobal/ExtraPhotoGlobal.apk

@@ -4,17 +4,24 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Device-Features
+PRODUCT_COPY_FILES += \
+    ${LOCAL_PATH}/configs/device_features/plato.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/device_features/plato.xml
+
 # MiuiCamera Icon Overlay
 PRODUCT_PACKAGES += \
     MiuiCameraOverlayIcon
 
-# Priv-app permission
+# MiuiCamera Permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-miuicamera.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-miuicamera.xml
+    $(LOCAL_PATH)/configs/permissions/com.xiaomi.hardware.camera.companion.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.xiaomi.hardware.camera.companion.xml \
+    $(LOCAL_PATH)/configs/permissions/miui-cameraopt.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/miui-cameraopt.xml \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-miuicamera.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-miuicamera.xml \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-extraphoto.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-extraphoto.xml
 
-# Sysconfig
+# MiuiCamera SysConfig
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/miuicamera-hiddenapi-package-allowlist.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/miuicamera-hiddenapi-package-allowlist.xml
+    $(LOCAL_PATH)/configs/sysconfig/miuicamera-hiddenapi-package-allowlist.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/miuicamera-hiddenapi-package-allowlist.xml
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
